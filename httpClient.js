@@ -25,4 +25,4 @@ let requestOptions = {
   path: '/http-examples/step1.html'
 };
 
-getHTML(requestOptions, console.log);
+module.exports = getHTML;
