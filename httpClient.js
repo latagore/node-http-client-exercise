@@ -1,6 +1,6 @@
 let https = require('https');
 
-function getAndPrintHTMLChunks(options) {
+function getAndPrintHTML(options) {
 
   /* Add your code here */
   
@@ -8,7 +8,7 @@ function getAndPrintHTMLChunks(options) {
     let output = "";
     // set encoding of received data to UTF-8
     response.setEncoding('utf8');
-
+    
     // the callback is invoked when a `data` chunk is received
     response.on('data', function (data) {
       output += data;
