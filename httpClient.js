@@ -1,11 +1,6 @@
-var https = require('https');
+let https = require('https');
 
-function getAndPrintHTMLChunks () {
-
-  var requestOptions = {
-    host: 'sytantris.github.io',
-    path: '/http-examples/step1.html'
-  };
+function getAndPrintHTMLChunks(options) {
 
   /* Add your code here */
   
@@ -25,4 +20,9 @@ function getAndPrintHTMLChunks () {
   });
 }
 
-getAndPrintHTMLChunks();
+let requestOptions = {
+  host: 'sytantris.github.io',
+  path: '/http-examples/step1.html'
+};
+
+getAndPrintHTMLChunks(requestOptions);
