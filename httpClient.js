@@ -1,6 +1,6 @@
 let https = require('https');
 
-function getAndPrintHTML(options) {
+function getHTML(options, cb) {
 
   /* Add your code here */
   
@@ -15,7 +15,7 @@ function getAndPrintHTML(options) {
     });
     
     response.on('end', function (data) {
-      console.log(output);
+      cb(output);
     });
   });
 }
@@ -25,4 +25,4 @@ let requestOptions = {
   path: '/http-examples/step1.html'
 };
 
-getAndPrintHTMLChunks(requestOptions);
+getHTML(requestOptions, console.log);
